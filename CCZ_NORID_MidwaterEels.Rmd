@@ -95,7 +95,7 @@ r2(gamm2$mer)
 lme4::isSingular(gamm2$mer)
 r2(gamm2$mer, tolerance = 1e-6)
 
-############ LMs to test DVM to replace the Mann-Whitney test
+############ LMs to test DVM
 head(dat)
 names(dat)
 #check if depth is normally distributed
