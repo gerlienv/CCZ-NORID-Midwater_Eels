@@ -104,7 +104,17 @@ r2(gamm2$mer)
 lme4::isSingular(gamm2$mer)
 r2(gamm2$mer, tolerance = 1e-6)
 
-
+#generate partial effect plots 
+pdf("gamm4_partial_effects_plots.pdf", width = 8, height = 6)
+par(mfrow = c(1, 2))  
+plot(gamm4$gam, 
+     residuals = TRUE, 
+     shade = TRUE, 
+     shade.col = "lightblue", 
+     seWithMean = TRUE, 
+     lwd = 2, 
+     rug = TRUE)
+dev.off()
 
 
 ```{r}
